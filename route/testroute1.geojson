@@ -1,0 +1,162 @@
+{
+    "name": "graph",
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.0,
+                    0.0
+                ]
+            },
+            "properties": {
+                "frame": "map",
+                "id": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.051311016082764,
+                    0.04838800057768822
+                ]
+            },
+            "properties": {
+                "frame": "map",
+                "id": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.283792972564697,
+                    4.912901878356934
+                ]
+            },
+            "properties": {
+                "frame": "map",
+                "id": 2
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.0563960000872612,
+                    4.464782238006592
+                ]
+            },
+            "properties": {
+                "frame": "map",
+                "id": 3
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "MultiLineString",
+                "coordinates": [
+                    [
+                        [
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            6.051311016082764,
+                            0.04838800057768822
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "cost": 0.0,
+                "endid": 1,
+                "id": 4,
+                "overridable": true,
+                "startid": 0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "MultiLineString",
+                "coordinates": [
+                    [
+                        [
+                            6.051311016082764,
+                            0.04838800057768822
+                        ],
+                        [
+                            6.283792972564697,
+                            4.912901878356934
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "cost": 0.0,
+                "endid": 2,
+                "id": 5,
+                "overridable": true,
+                "startid": 1
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "MultiLineString",
+                "coordinates": [
+                    [
+                        [
+                            6.283792972564697,
+                            4.912901878356934
+                        ],
+                        [
+                            0.0563960000872612,
+                            4.464782238006592
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "cost": 0.0,
+                "endid": 3,
+                "id": 6,
+                "overridable": true,
+                "startid": 2
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "MultiLineString",
+                "coordinates": [
+                    [
+                        [
+                            0.0563960000872612,
+                            4.464782238006592
+                        ],
+                        [
+                            0.0,
+                            0.0
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "cost": 0.0,
+                "endid": 0,
+                "id": 7,
+                "overridable": true,
+                "startid": 3
+            }
+        }
+    ]
+}

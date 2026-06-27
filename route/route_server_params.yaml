@@ -1,0 +1,22 @@
+route_server:
+  ros__parameters:
+    graph_filepath: /home/rbt-roeun/clearpath/route/fullLoopRoute1.geojson
+    graph_file_loader:
+      plugin: "nav2_route::GeoJsonGraphFileLoader"
+    route_frame: map
+    base_frame: base_link
+    path_density: 0.05
+    radius_to_achieve_node: 0.5
+    boundary_radius_to_achieve_node: 1.0
+    smooth_corners: true
+    smoothing_radius: 1.0
+    tracker_update_rate: 50.0
+    edge_cost_functions: ["DistanceScorer"]
+    DistanceScorer:
+      plugin: "nav2_route::DistanceScorer"
+    operations: ["AdjustSpeedLimit", "ReroutingService"]
+    AdjustSpeedLimit:
+      plugin: "nav2_route::AdjustSpeedLimit"
+    ReroutingService:
+      plugin: "nav2_route::ReroutingService"
+    aggregate_blocked_ids: false
