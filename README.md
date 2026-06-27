@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # Husky A200 — Nav2 Route Following & Performance Evaluation
 
 Platform: Clearpath Husky A200 | Namespace: `a200_1103` | ROS 2 Jazzy / Ubuntu 24.04 | Simulation: Gazebo Harmonic
@@ -139,5 +138,4 @@ Full breakdown: `results/summary_laps.json` and `results/loop_trajectory_overlay
 | 1 | Robot stationary, AMCL never publishes TF | Particle filter blocked by a scan/odom timestamp gap | `set_initial_pose: true` in `localization_custom.yaml` |
 | 2 | Route computed and visible in RViz, robot still doesn't move | `controller_server`'s `FollowPath` had zero action clients — nothing was calling it | Bridge script forwards the route server's path to `FollowPath` directly |
 | 3 | Repeated single-edge runs (`0->3`) failed with `INVALID_PATH` after the first | Each run requested a fixed start node regardless of the robot's actual position; uncancelled prior goals compounded it | Drive the loop sequentially, edge by edge, so the robot is always physically where the next edge expects it |
-EOF
-echo "README.md written."
+
