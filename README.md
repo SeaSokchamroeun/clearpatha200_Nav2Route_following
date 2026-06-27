@@ -19,6 +19,39 @@ in Gazebo simulation.
 - Clearpath A200 stack (`ros-jazzy-clearpath-*`, `clearpath_nav2_demos`, `clearpath_gz`, `clearpath_viz`)
 
 ## Repository structure
+├── nav2_custom.yaml              # Full nav2 params (controller, costmaps, route_server, etc.)
+
+├── nav2_custom.launch.py         # Launches nav2 with nav2_custom.yaml
+
+├── localization_custom.yaml      # AMCL params, includes the set_initial_pose fix
+
+├── localization_custom.launch.py # Launches localization with localization_custom.yaml
+
+└── route/
+
+├── testroute1.geojson        # 4-node square loop — verified, safe to use
+
+├── fullLoopRoute1.geojson    # 9-node loop — verification pending
+
+├── fullLoopRoute2.geojson    # 9-node loop + 3 extra edges (8->0, 8->1, 8->5) — verification pending
+
+├── route_loop_eval.py        # Evaluation harness — drives any loop, N laps, logs everything
+
+├── analyze_laps.py           # Computes tracking / cross-track / corner / velocity / success metrics
+
+├── drive_route.py            # One-shot single-edge drive (manual testing / demo)
+
+├── route_server_params.yaml  # legacy — only used by deprecated route_server.launch.py
+
+├── send_route_goal.py        # legacy — computes/tracks a route but does NOT drive the robot
+
+├── route_eval.py             # legacy — superseded by route_loop_eval.py
+
+├── analyze_runs.py           # legacy — superseded by analyze_laps.py
+
+├── route_server.launch.py    # deprecated — standalone route_server, duplicate-node conflict with nav2
+
+└── nav2_with_route.launch.py # deprecated — same duplicate-node conflict
 ## Why two custom launch wrappers?
 
 The stock `clearpath_nav2_demos` launch files hardcode their own parameter
